@@ -1,12 +1,9 @@
-//** Change color for delete button */
-
+// Remove parent element when click the button
+// Event object always be passed to the fucntion listener as argument
 let deleteButton = document.querySelectorAll(`.delete`);
-deleteButton = [...deleteButton];
-deleteButton.forEach(ele => {
-  ele.addEventListener(`click`, changeColor);
+[...deleteButton].forEach(ele => {
+  ele.addEventListener(`click`, deleteElement);
 });
-//** How to add class or attribute for an element */
-function changeColor(e) {
-  e.target.classList.add(`btn`);
-  e.target.classList.add(`btn-outline-primary`);
+function deleteElement(ele) {
+  ele.target.parentNode.remove();
 }
