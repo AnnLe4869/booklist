@@ -1,9 +1,7 @@
-// Remove parent element when click the button
-// Event object always be passed to the fucntion listener as argument
-let deleteButton = document.querySelectorAll(`.delete`);
-[...deleteButton].forEach(ele => {
-  ele.addEventListener(`click`, deleteElement);
-});
-function deleteElement(ele) {
-  ele.target.parentNode.remove();
-}
+// Modify class with classList and DOMTokenList method
+let el = document.querySelector(`button`);
+let elClass = el.classList;
+console.log(elClass);
+elClass.add("btn", "btn-danger");
+console.log(elClass);
+elClass.replace("btn-danger", "btn-info");
