@@ -1,3 +1,6 @@
+// We use lastChildElement to navigate where to add child
+// Note that we still be able to modify the content inside a read-only property
+// Special note: pay attention to the return value of each method
 function appendElement(spanContent) {
   document.querySelector(`ul`).appendChild(document.createElement(`li`));
   document
