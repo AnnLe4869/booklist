@@ -118,6 +118,12 @@ h2 {
   display: block;
   clear: both;
 }
+#add-book #hide {
+  width: 30px;
+}
+#add-book label {
+  line-height: 52px;
+}
 
 /*
 #tabbed-content li{
@@ -138,9 +144,3 @@ h2 {
     display: block;
 }
 */
-.booklist-border {
-  border-left: #ddd solid 0.5rem !important;
-}
-.booklist-border:hover {
-  border-left: #9361bf solid 0.5rem !important;
-}
