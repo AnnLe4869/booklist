@@ -1,12 +1,20 @@
-// Use bubbling to handle event
-// Event will bubble up to the ancestor, trigger the ancestor handler
-// Key point: choose the ancestor and choose the element in which event happen
-// Make Javascript run faster and more efficent than assign event handler for each element
-// Take note on the difference between event.target and event.currentTarget
 let list = document.querySelector(`#book-list ul`);
-list.addEventListener("click", function(e) {
-  if (e.target.className === "delete") {
-    let li = e.target.parentElement;
-    list.removeChild(li);
+list.addEventListener(`click`, function(e) {
+  if (e.target.className === `delete`) {
+    list.removeChild(e.target.parentNode);
   }
 });
+
+let addForm = document.forms[`add-book`];
+addForm.addEventListener(`submit`, function(e) {
+  e.preventDefault();
+  let formValue = this.querySelector(`input`).value;
+  console.log(formValue);
+  addELement(formValue);
+});
+
+function addELement(content) {
+  let newElement = document.querySelector(`li`).cloneNode();
+  newElement.firstElementChild.textContent = content;
+  list.appendChild(newElement);
+}
