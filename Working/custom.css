@@ -81,7 +81,7 @@ h2 {
 }
 
 #add-book {
-  width: 550px;
+  width: 450px;
   margin: 0 auto;
 }
 #add-book input[type="checkbox"],
@@ -103,6 +103,7 @@ h2 {
 
 #add-book button {
   display: inline-block;
+  box-sizing: border-box;
   border: 1px solid #9361bf;
   background: #9361bf;
   padding: 10px 20px;
