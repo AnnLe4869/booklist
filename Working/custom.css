@@ -81,12 +81,17 @@ h2 {
 }
 
 #add-book {
-  width: 400px;
+  width: 550px;
   margin: 0 auto;
 }
+#add-book input[type="checkbox"],
+#add-book label {
+  display: inline;
+  margin: auto;
+}
 
-#add-book input {
-  display: block;
+#add-book input[type="text"] {
+  display: inline-block;
   margin: 20px 0;
   padding: 10px;
   border: 1px solid #ccc;
@@ -94,20 +99,18 @@ h2 {
   border-radius: 4px 0 0 4px;
   box-sizing: border-box;
   width: 300px;
-  float: left;
 }
 
 #add-book button {
+  display: inline-block;
   border: 1px solid #9361bf;
   background: #9361bf;
   padding: 10px 20px;
   font-size: 16px;
-  display: inline-block;
   margin: 0;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
   width: 100px;
-  float: left;
   margin: 20px 0;
   border-left: 0;
   color: white;
@@ -118,29 +121,29 @@ h2 {
   display: block;
   clear: both;
 }
+#add-book #hide {
+  width: 30px;
+}
+#add-book label {
+  line-height: 52px;
+}
 
-/*
-#tabbed-content li{
-    display: inline-block;
-    padding: 10px 14px;
-    background: #ddd;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 10px;
+#tabbed-content li {
+  display: inline-block;
+  padding: 10px 14px;
+  background: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
 }
-#tabbed-content .tab{
-    display: none;
-    border: 1px solid #ddd;
-    padding: 0 10px;
-    border-radius: 4px;
+
+#tabbed-content .panel {
+  display: none;
+  border: 1px solid #ddd;
+  padding: 0 10px;
+  border-radius: 4px;
 }
-#tabbed-content .tab.active{
-    display: block;
-}
-*/
-.booklist-border {
-  border-left: #ddd solid 0.5rem !important;
-}
-.booklist-border:hover {
-  border-left: #9361bf solid 0.5rem !important;
+
+#tabbed-content .panel.active {
+  display: block;
 }
