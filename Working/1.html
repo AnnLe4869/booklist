@@ -6,7 +6,8 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="custom.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="bootstap.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="1.js">
 </head>
 <body>
     <div id="wrapper">
@@ -41,46 +42,29 @@
             </ul>
         </div>
         <form id="add-book">
+            <input type="checkbox" id="hide">
+            <label for="hide">Hide all books</label>
             <input type="text" placeholder="Add a book..." />
             <button>Add</button>
         </form>
     </div>
+    <div id="tabbed-content">
+        <ul class="tabs">
+            <li data-target="#about" class="active">About</li>
+            <li data-target="#contact">Contact</li>
+        </ul>
+        <div class="panel active" id="about">
+            <p>Content for about tab...</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id nunc porta urna ornare rhoncus. Ut
+                convallis ante at.</p>
+        </div>
+        <div class="panel" id="contact">
+            <p>Content for contact tab...</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id nunc porta urna ornare rhoncus. Ut
+                convallis ante at.</p>
+        </div>
+    </div>
+    </div>
     
-    <script src="1.js"></script>
-    <!-- <div class="card w-75 mx-auto">
-        <div class="card-header text-center">
-            <h1 class="card-title">Bookorama</h1>
-            <p class="card-text">Books for ninjas</p>
-            <form class="form-inline">
-                <input type="search" class="form-control w-50 mx-auto"placeholder="Search book...">
-            </form>
-        </div>
-
-        <div class="card-body">
-            <h2 class="card-subtitle mb-3">Books to read</h2>
-            <ul class="list-group ml-lg-3">
-                <div class="booklist-border my-lg-2 list-group-item d-md-flex justify-content-between">
-                    <p class="card-text my-auto">Name of the wind</p>
-                    <button class="btn btn-primary">Delete</button>
-                </div>
-                <div class="booklist-border my-lg-2 list-group-item d-md-flex justify-content-between">
-                    <p class="card-text my-auto">The Wise Man's Fear</p>
-                    <button class="btn btn-primary">Delete</button>
-                </div>
-                <div class="booklist-border my-lg-2 list-group-item d-md-flex justify-content-between">
-                    <p class="card-text my-auto">Kafka on the Shore</p>
-                    <button class="btn btn-primary">Delete</button>
-                </div>
-            </ul>
-
-            <form id="addbook" class="form-inline justify-content-center">
-                <div class="form-group">
-                    <label for="add" class="sr-only">Add your book here</label>
-                    <input type="text" id="add" class="form-control" style="height:3rem;width:20rem" placeholder="Add a book...">
-                </div>
-                <button class="btn btn-primary" style="height:3rem; width:5rem" type="submit">Add</button>
-            </form>
-        </div>
-    </div> -->
 </body>
 </html>
