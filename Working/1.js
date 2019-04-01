@@ -19,7 +19,9 @@ $(document).ready(function() {
     $(this).trigger("reset");
   });
 
-  // Delete book
+  // Remove book
+  // Delegate event in case new element is added later
+  // Note the use of target and currentTarget
   $(`#book-list ul`).on("click", ".delete", function() {
     $(this)
       .parent()
@@ -29,9 +31,9 @@ $(document).ready(function() {
   // Hide book
   $(`#add-book input[type='checkbox']`).on("input", function() {
     if ($(this).is(`:checked`)) {
-      $(`#book-list ul li`).css({ display: "none" });
+      $(`#book-list li`).css({ display: "none" });
     } else {
-      $(`#book-list ul li`).css({ display: "block" });
+      $(`#book-list li`).css({ display: "block" });
     }
   });
 
@@ -61,6 +63,7 @@ $(document).ready(function() {
   // Toggle panel
   $(`.tabs`).on("click", function(e) {
     $(`.panel`).each(function() {
+      // Note the return value of below method
       if ($(e.target).data("target") === "#" + $(this).prop("id")) {
         $(this).addClass("active");
       } else {
