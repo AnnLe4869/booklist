@@ -16,9 +16,22 @@ addForm.addEventListener(`submit`, function(e) {
 
   // Add new element
   function addELement(content) {
-    let newElement = document.querySelector(`li`).cloneNode(true);
-    newElement.firstElementChild.textContent = content;
-    list.appendChild(newElement);
+    document.querySelector(`ul`).appendChild(document.createElement(`li`));
+    document
+      .querySelector(`ul`)
+      .lastElementChild.appendChild(createElement(`span`, content, `name`));
+    document
+      .querySelector(`ul`)
+      .lastElementChild.appendChild(createElement(`span`, `delete`, `delete`));
+
+    // A sub-function to create new element and add content and class name to it
+    function createElement(tag, content, className) {
+      let tagName = document.createElement(tag);
+      let elementContent = document.createTextNode(content);
+      tagName.appendChild(elementContent);
+      tagName.className = className;
+      return tagName;
+    }
   }
 });
 
